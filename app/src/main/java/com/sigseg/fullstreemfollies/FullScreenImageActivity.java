@@ -3,6 +3,7 @@ package com.sigseg.fullstreemfollies;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -16,6 +17,7 @@ public class FullScreenImageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_full_screen_image);
 
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         Glide.with(this)
                 .load("http://i.huffpost.com/gen/2229248/images/o-PARALLEL-UNIVERSES-facebook.jpg")
                 .centerCrop()
